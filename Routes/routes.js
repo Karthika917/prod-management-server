@@ -22,4 +22,7 @@ router.get("/get-products", jwtmiddle, productController.getProducts);
 
 router.get("/product/:id",jwtmiddle,productController.getProductById);
 
+router.put("/product/:id",jwtmiddle, upload.array("images"), productController.updateProduct);
+
+
 module.exports = router
